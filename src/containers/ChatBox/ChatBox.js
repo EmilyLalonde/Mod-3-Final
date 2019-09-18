@@ -74,6 +74,7 @@ export const mapStateToProps = ({ errorMsg }) => ({
   errorMsg
 })
 
-export const mapDispatchToProps = dispatch => bindActionCreators({ hasErrored }, dispatch);
+export const mapDispatchToProps = dispatch => 
+bindActionCreators({ hasErrored }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChatBox);
