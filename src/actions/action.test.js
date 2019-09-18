@@ -1,7 +1,9 @@
 import {
   createUser,
   removeUser,
-  hasErrored
+  hasErrored,
+  addMessage,
+  clearMessage
 } from '../actions';
 
 describe('actions', () => {
@@ -31,6 +33,25 @@ describe('actions', () => {
     const expected = {
       type: 'HAS_ERRORED',
       errorMsg: 'error'
+    }
+    expect(result).toEqual(expected);
+  })
+
+  it('should return the correct action object for the action type - addMessage', () => {
+    const mockResult = 'I feel happy'
+    const result = addMessage(mockResult)
+    const expected = {
+      type: 'ADD_MESSAGE',
+      message: mockResult
+    }
+    expect(result).toEqual(expected);
+  })
+
+  it('should return the correct action object for the action type - clearMessage', () => {
+    const mockResult = ''
+    const result = clearMessage(mockResult)
+    const expected = {
+      type: 'CLEAR_MESSAGE',
     }
     expect(result).toEqual(expected);
   })
