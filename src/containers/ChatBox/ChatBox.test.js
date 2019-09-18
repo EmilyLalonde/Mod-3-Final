@@ -116,7 +116,7 @@ describe('ChatBox component', () => {
 });
 
 describe('mapStateToProps', () => {
-  it('should return an object with the messages and errorMsg information', () => {
+  it('should return an object with the user and errorMsg information', () => {
     const mockUser = {
       id: 1568665187737,
       firstName: "Travis",
@@ -126,10 +126,6 @@ describe('mapStateToProps', () => {
 
     const mockState = {
       user: mockUser,
-      messages: [{
-        message: 'Hi there, my name is Dr. Watson. I understand that you have been feeling happy. That is super exciting to hear!',
-        isUser: false,
-      }],
       errorMsg: ''
     };
     const expected = {
