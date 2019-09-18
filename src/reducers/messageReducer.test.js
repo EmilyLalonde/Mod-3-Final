@@ -8,13 +8,13 @@ describe('messageReducer', () => {
   })
 
   it('should return the initial state', () => {
-    const result = messageReducer('', {});
+    const result = messageReducer([], {});
 
-    expect(result).toEqual('');
+    expect(result).toEqual([]);
   });
 
   it('should return the right version of state from reducer - addMessage', () => {
-    mockState = '';
+    mockState = [];
     const mockAction = {
       type: 'ADD_MESSAGE',
       message: mockMessage
@@ -28,7 +28,7 @@ describe('messageReducer', () => {
       type: 'CLEAR_MESSAGE',
     }
     const result = messageReducer(mockState, mockAction);
-    const expected = '';
+    const expected = [];
     expect(result).toEqual(expected)
   });
 });
