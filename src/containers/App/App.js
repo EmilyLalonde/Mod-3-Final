@@ -36,6 +36,7 @@ export class App extends Component {
   }
 
   render() {
+    console.log('user', this.props.user)
     const { user } = this.props;
     const { messages } = this.state;
     return (
