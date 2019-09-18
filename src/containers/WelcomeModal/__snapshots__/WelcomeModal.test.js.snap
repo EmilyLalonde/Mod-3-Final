@@ -60,7 +60,6 @@ exports[`WelcomeModal component should display an error message if not all of th
     </option>
   </select>
   <button
-    disabled={true}
     onClick={[Function]}
   >
     Take 5 minutes to check in!
@@ -123,7 +122,6 @@ exports[`WelcomeModal component should match the snapshot if there are no errors
     </option>
   </select>
   <button
-    disabled={false}
     onClick={[Function]}
   >
     Take 5 minutes to check in!
