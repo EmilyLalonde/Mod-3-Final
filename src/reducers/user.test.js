@@ -7,6 +7,12 @@ describe('user', () => {
     mockUser = [{id: 1568780400483, firstName: "Emily", lastName: "Lalonde", feeling: "happy"}]
   })
 
+  it('should return the initial state', () => {
+    const result = user(null, {});
+
+    expect(result).toEqual(null);
+  });
+
   it('should return the right version of state from reducer - createUser', () => {
     mockState = [];
     const mockAction = {

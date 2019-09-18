@@ -1,10 +1,15 @@
 import { messageReducer } from './messageReducer';
 
 describe('messageReducer', () => {
-  let mockState, mockMessage;
+  let mockState, mockMessage, mockIsUser;
 
   beforeEach(() => {
-    mockMessage = 'I am happy'
+    mockMessage = [
+      {
+        isUser: true,
+        message: 'I am happy!'
+      }
+    ]
   })
 
   it('should return the initial state', () => {
@@ -17,10 +22,11 @@ describe('messageReducer', () => {
     mockState = [];
     const mockAction = {
       type: 'ADD_MESSAGE',
-      message: mockMessage
+      message: mockMessage,
+      isUser: mockIsUser
     }
     const result = messageReducer(mockState, mockAction);
-    expect(result).toEqual(mockMessage)
+    expect(result).toEqual([{isUser: undefined, message: [{isUser: true, message: "I am happy!"}]}])
   });
 
   it('should return the right version of state from reducer - clearMessage', () => {
