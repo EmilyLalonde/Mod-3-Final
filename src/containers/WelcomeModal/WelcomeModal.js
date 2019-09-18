@@ -68,7 +68,7 @@ export class WelcomeModal extends Component {
           <option value="stressed">Stressed</option>
           <option value="frustrated">Frustrated</option>
         </select>
-        <button onClick={this.handleSubmit}>
+        <button disabled={!this.state.firstName && !this.state.lastName} onClick={this.handleSubmit}>
           Take 5 minutes to check in!
         </button>
       </form>

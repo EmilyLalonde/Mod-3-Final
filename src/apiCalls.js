@@ -30,7 +30,7 @@ export const postMessage = async newMessage => {
 
   const response = await fetch(url, options);
   if (!response.ok) {
-    throw Error('Dr Watson is currently down.  Please try again later.')
+    throw Error('There was a problem posting your message.')
   }
   const data = await response.json();
   console.log(data)
